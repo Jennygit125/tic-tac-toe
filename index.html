@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="MainContainer">
+        <section id="1">
+<h1>Tic tac toe</h1>
+<p>Let's play</p>
+<div id="form-container">
+    <div id="form">
+        <form>
+        <label for="userinfo">Input player name</label><br>
+        <input class="userinfo" type="text" placeholder="Player 1"><br><br>
+        <label for="userinfo">Input player name</label><br>
+
+        <input class="userinfo" type="text" placeholder="Player 2"><br>
+        <input type="submit">
+        </form>
+    </div>
+    </div>
+    </section>
+    <section id="2">
+        <div id="display">
+        <h1>Choose a grid size</h1>
+        <div id="gridsizCon">
+            
+    <label for="grid-size">Board Size:</label>
+    <select id="grid-size" onchange="updateGrid()">
+        <option value="3">3 x 3 (Classic)</option>
+        <option value="4">4 x 4</option>
+        <option value="5">5 x 5</option>
+    </select>
+</div>
+</section>
+<section id="3">
+        <div id="Mode">
+        <h1>SELECT MODE</h1>
+        <div id="modeCon">
+            <button>Player vs Player</button>
+            <button>Player vs Computer</button>
+        </div>
+        </div>
+    <div id="score">
+     <h1>Score</h1>
+    <div id="game">
+    <div id="result">
+        <p id="username1">Username:<output></output></p>
+        <p id="username2">Username:<output></output></p>
+        </div>
+            <div id="game-container">
+    <div id="tic-tac-toe-board"></div>
+</div>
+    </div>
+    </div>
+        </div>
+</section>
+    <script src="tic.js"></script>
+</body>
+</html>
