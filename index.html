@@ -7,58 +7,57 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="MainContainer">
-        <section id="1">
+
 <h1>Tic tac toe</h1>
 <p>Let's play</p>
-<div id="form-container">
     <div id="form">
-        <form>
-        <label for="userinfo">Input player name</label><br>
-        <input class="userinfo" type="text" placeholder="Player 1"><br><br>
-        <label for="userinfo">Input player name</label><br>
-
-        <input class="userinfo" type="text" placeholder="Player 2"><br>
-        <input type="submit">
+        <form id="setup-form">
+        <label for="player-one">Input player name</label><br>
+        <input id="player-one" class="userinfo" type="text" placeholder="Player 1"><br><br>
+        <label for="player-two">Input player name</label><br>
+        <input id="player-two" class="userinfo" type="text" placeholder="Player 2"><br>
+        <p id="setup-message" aria-live="polite"></p>
+        <input id="submit" type="submit" value="Start Game">
         </form>
     </div>
-    </div>
-    </section>
-    <section id="2">
         <div id="display">
         <h1>Choose a grid size</h1>
         <div id="gridsizCon">
-            
     <label for="grid-size">Board Size:</label>
-    <select id="grid-size" onchange="updateGrid()">
+    <select id="grid-size">
+        <option value="1">select size</option>
         <option value="3">3 x 3 (Classic)</option>
         <option value="4">4 x 4</option>
         <option value="5">5 x 5</option>
     </select>
+    <p id="grid-message" aria-live="polite"></p>
 </div>
-</section>
-<section id="3">
+        </div>
         <div id="Mode">
         <h1>SELECT MODE</h1>
         <div id="modeCon">
-            <button>Player vs Player</button>
-            <button>Player vs Computer</button>
+            <button type="button" data-mode="pvp">Player vs Player</button>
+            <button type="button" data-mode="pvc">Player vs Computer</button>
         </div>
         </div>
     <div id="score">
      <h1>Score</h1>
     <div id="game">
     <div id="result">
-        <p id="username1">Username:<output></output></p>
-        <p id="username2">Username:<output></output></p>
+        <p id="username1">Username: <output></output></p>
+        <p id="score1">Score: <output>0</output></p>
+        <p id="username2">Username: <output></output></p>
+        <p id="score2">Score: <output>0</output></p>
+        <p id="turn-status" aria-live="polite"></p>
+        <p id="round-result" aria-live="polite"></p>
+        <button id="play-again" type="button">Play Again</button>
         </div>
             <div id="game-container">
     <div id="tic-tac-toe-board"></div>
 </div>
     </div>
     </div>
-        </div>
-</section>
+
     <script src="tic.js"></script>
 </body>
 </html>
